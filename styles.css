@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 1440px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background: url(./images/bg-intro-desktop.png) no-repeat hsl(0, 100%, 74%);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  height: 95vh;
+  margin: 0px auto 0px auto;
+  max-width: 80%;
+  color: white;
+}
+
+/* Left side */
+
+#text-part h1 {
+  font-size: 50px;
+  line-height: 1;
+}
+
+#text-part p {
+  margin-top: 20px;
+}
+
+/* Right side */
+
+#cta-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__cta {
+  font-family: "Poppins";
+  font-size: 15px;
+  background-color: #5c54a2;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+}
+
+.btn__cta > span {
+  font-weight: 700;
+}
+
+#form-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 40px 50px 35px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.input__shape {
+  padding: 20px;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+}
+
+.input__shape:focus {
+  outline: 1px solid #5c54a2;
+}
+
+.input__shape:focus::placeholder {
+  color: rgb(50, 50, 50);
+}
+
+.input__shape::placeholder {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn__submit {
+  text-transform: uppercase;
+  background-color: #38cc8c;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #2faf78;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+#form-part p {
+  margin-top: 15px;
+  font-size: 11px;
+  color: #b9b6d3;
+}
+
+#form-part a {
+  font-weight: 700;
+  color: rgba(255, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+/*Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
