@@ -6,12 +6,13 @@
 
 html {
   max-width: 1440px;
+  min-height: 100%;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  background: url(./images/bg-intro-desktop.png) no-repeat hsl(0, 100%, 74%);
+  background: url(./images/bg-intro-desktop.png) no-repeat rgb(255, 122, 122);
 }
 
 p {
@@ -24,10 +25,15 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 70px;
   align-items: center;
-  height: 95vh;
+  min-height: 95vh;
   margin: 0px auto 0px auto;
   max-width: 80%;
   color: white;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
 }
 
 /* Left side */
@@ -57,6 +63,9 @@ p {
   border-radius: 10px;
   border: none;
   margin-bottom: 25px;
+  box-shadow: 0px 7px 0px 0px rgb(219, 103, 103);
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(219, 103, 103);
+  -moz-box-shadow: 0px 7px 0px 0px rgba(219, 103, 103);
 }
 
 .btn__cta > span {
@@ -71,7 +80,10 @@ p {
   text-align: center;
   background-color: white;
   border-radius: 10px;
-  padding: 30px 40px 50px 35px;
+  padding: 30px 40px 50px 40px;
+  box-shadow: 0px 7px 0px 0px rgb(219, 103, 103);
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(219, 103, 103);
+  -moz-box-shadow: 0px 7px 0px 0px rgba(219, 103, 103);
 }
 
 #form {
@@ -79,6 +91,10 @@ p {
   flex-direction: column;
   width: 100%;
   gap: 10px;
+}
+
+.form__field {
+  width: 100%;
 }
 
 .input__shape {
@@ -107,11 +123,14 @@ p {
   color: white;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #2faf78;
+  border: 1px solid rgb(47, 175, 120);
   margin-top: 10px;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.5px;
+  box-shadow: 0px -3px 0px 0.5px rgba(47, 175, 120, 0.73) inset;
+  -webkit-box-shadow: 0px -3px 0px 0.5px rgba(47, 175, 120, 0.73) inset;
+  -moz-box-shadow: 0px -3px 0px 0.5px rgba(47, 175, 120, 0.73) inset;
 }
 
 #form-part p {
@@ -126,13 +145,79 @@ p {
   text-decoration: none;
 }
 
-/*Attribution */
+/* Form Validation */
+
+.error {
+  border: 1px solid red;
+}
+
+/* Attribution */
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-bottom: 5px;
+  margin: 15px auto 10px auto;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #main__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 0px auto 0px auto;
+    max-width: 90%;
+  }
+
+  #text-part {
+    text-align: center;
+    margin: auto;
+    max-width: 90%;
+  }
+
+  #text-part h1 {
+    margin-top: 80px;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  #text-part p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .btn__cta {
+    padding: 20px 60px;
+  }
+
+  .btn__cta > span {
+    font-weight: 600;
+  }
+
+  #form-part {
+    padding: 15px 20px 25px 20px;
+  }
+
+  .input__shape {
+    padding: 18px;
+  }
+
+  .input__shape::placeholder {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  #form-part p {
+    max-width: 80%;
+  }
+
+  .btn__submit {
+    padding: 18px;
+    font-size: 14px;
+  }
 }
