@@ -149,6 +149,28 @@ button {
 
 .error {
   border: 1px solid red;
+  background: url(./images/icon-error.svg) top 50% right 5% no-repeat no-repeat;
+}
+
+.error.input__shape:focus {
+  outline: 1px solid red;
+}
+
+.error.input__shape::placeholder {
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 600;
+}
+
+.error__message {
+  margin-top: -5px;
+  font-style: italic;
+  font-size: 12px;
+  text-align: end;
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.error__icon {
+  display: none;
 }
 
 /* Attribution */

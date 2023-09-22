@@ -34,7 +34,7 @@
             <span>Try it free 7 days</span> then $20/mo. thereafter
           </button>
           <article id="form-part">
-            <form id="form">
+            <form id="form" novalidate>
               <label class="input__label" for="firstname"></label>
               <input
                 class="input__shape"
@@ -43,7 +43,7 @@
                 id="firstname"
                 placeholder="First Name"
               />
-              <small></small>
+              <small class="error__message"></small>
               <label class="input__label" for="lastname"></label>
               <input
                 class="input__shape"
@@ -52,7 +52,8 @@
                 id="lastname"
                 placeholder="Last Name"
               />
-              <small></small>
+              <!-- <img class="error__icon" src="./images/icon-error.svg" /> -->
+              <small class="error__message"></small>
               <label class="input__label" for="email"></label>
               <input
                 class="input__shape"
@@ -61,7 +62,7 @@
                 id="email"
                 placeholder="Email Adress"
               />
-              <small></small>
+              <small class="error__message"></small>
               <label class="input__label" for="pass"></label>
               <input
                 class="input__shape"
@@ -70,7 +71,7 @@
                 id="pass"
                 placeholder="Password"
               />
-              <small></small>
+              <small class="error__message"></small>
               <input
                 type="submit"
                 value="Claim your free trial"

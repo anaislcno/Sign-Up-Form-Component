@@ -25,6 +25,12 @@ const showError = (input, message) => {
 
   const error = input.nextElementSibling;
   error.textContent = message;
+
+  if (input.id === "email") {
+    input.setAttribute("placeholder", "email@example.fr");
+  } else {
+    input.setAttribute("placeholder", "");
+  }
 };
 
 // Fonction success
@@ -56,7 +62,6 @@ const checkLastName = () => {
   let valid = false;
 
   const lastName = lastNameEl.value.trim();
-
   if (!isRequired(lastName)) {
     showError(lastNameEl, "Last Name cannot be empty");
   } else {
@@ -69,6 +74,7 @@ const checkLastName = () => {
 const checkEmail = () => {
   let valid = false;
   const email = emailEl.value.trim();
+
   if (!isRequired(email)) {
     showError(emailEl, "Email cannot be empty");
   } else if (!isRegexValid(email)) {
@@ -86,7 +92,7 @@ const checkPassword = () => {
   const password = passwordEl.value.trim();
 
   if (!isRequired(password)) {
-    showError(passwordEl, "Password cannot be emmpty.");
+    showError(passwordEl, "Password cannot be empty.");
   } else {
     showSuccess(passwordEl);
     valid = true;
